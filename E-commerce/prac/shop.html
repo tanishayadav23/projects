@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="stylee.css"> <!-- Link to your main CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> <!-- Font Awesome for icons -->
+  <style>
+  
+.header {
+    padding: 5px 20px;
+    background-color: #fff; /* or your desired background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10px; /* makes it visibly thin */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+
+/* Logo size adjustment
+header .logo {
+    height:
+
+} */
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header id="header">
+        <a href="#"><img src="images/Black White Minimalist Professional Initial Logo.png" alt="Logo" class="logo"></a>
+        <nav>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li> 
+                <li><a href="shop.html" class="active">Shop</a></li> 
+                <li><a href="blog.html">Blog</a></li> 
+                <li><a href="about us .html">About</a></li> 
+                <li><a href="contact.html">Contact</a></li> 
+                <li><a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span id="cart-count">0</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>Welcome to Our Shop!</h1>
+            <p>Discover amazing products, great deals, and more!</p>
+            <a href="#shop" class="shop-now-btn">Shop Now</a>
+        </div>
+        <div class="banner-image">
+            <img src="https://img.freepik.com/premium-vector/best-deal-sale-sticker-template_419341-2050.jpg" alt="Shop Banner" class="banner-img">
+        </div>
+    </section>
+
+    <!-- Deals Section -->
+    <section id="deals">
+        <h2>Special Offers & Deals</h2>
+        <div class="deals-container">
+            <div class="deal-card">
+                <img src="https://imamykonos.com/wp-content/uploads/2024/05/21-1-copy.jpg" alt="Dress Offer">
+                <h3>50% OFF on Dresses</h3>
+                <p>Limited time only! Grab your favorite dresses at half price.</p>
+                <a href="shop.html" class="deal-btn">Shop Now</a>
+            </div>
+            <div class="deal-card">
+                <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg?cs=srgb&dl=pexels-melvin-buezo-2529148.jpg&fm=jpg" alt="Shoes Offer">
+                <h3>Buy 1 Get 1 Free</h3>
+                <p>Exclusive sale! Buy a pair of shoes and get another free.</p>
+                <a href="shop.html" class="deal-btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h2>Shop Now</h2>
+        <p>Browse our collection of amazing products</p>
+        <div id="product1" class="section-p1">
+            <h2>Featured Products</h2>
+            <p>Summer Collection - New Modern Designs</p>
+            <div class="pro-container">
+                <!-- Product 1 -->
+                <div class="pro">
+                    <img src="https://www.promfy.com/uploads/product/1/6/16808/trendy-yellow-velvet-strapless-corset-slit-evening-dress-1.jpg" alt="Dress" class="product-img">
+                    <div class="product-info">
+                        <span>Brand Name</span>
+                        <h5>Beautiful Summer Dress</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h4>Rs 1,200</h4>
+                    </div>
+                    <a href="cart.html" class="add-to-cart">
+                        <i class="fas fa-shopping-cart cart-icon"></i> Add to Cart
+                    </a>
+                </div>
+                <!-- Product 2 -->
+                <div class="pro">
+                    <img src="https://de.best-wallpaper.net/wallpaper/1920x1200/1712/Nike-sneakers-shoes_1920x1200.jpg" alt="Shoes" class="product-img">
+                    <div class="product-info">
+                        <span>Brand Name</span>
+                        <h5>Stylish Running Shoes</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h4>Rs 1,500</h4>
+                    </div>
+                    <a href="cart.html" class="add-to-cart">
+                        <i class="fas fa-shopping-cart cart-icon"></i> Add to Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="images/Black White Minimalist Professional Initial Logo.png" alt="Logo" class="footer-logo">
+                <p>&copy; 2025 Shop Name. All Rights Reserved.</p>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="javascript.js"></script> <!-- JS file -->
+
+</body>
+</html>

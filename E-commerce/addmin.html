@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #6bbae5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar .nav-link {
+            color: #6c757d;
+        }
+        .sidebar .nav-link.active {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #e9ecef;
+        }
+        .content {
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+
+        <div class="sidebar p-3">
+            <div class="d-flex align-items-center mb-4">
+                
+                <span class="ml-2 h4 font-weight-bold">School Management</span>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link " href="index.html"><i class="fas fa-tachometer-alt mr-2"></i>Dashboard</a>
+                <a class="nav-link active" href="addmin.html"><i class="fas fa-user-shield mr-2"></i>Admin Dashboard</a>
+                <a class="nav-link" href="teacher.html"><i class="fas fa-chalkboard-teacher mr-2"></i>Teacher Dashboard</a>
+                <a class="nav-link" href="student.html"><i class="fas fa-user-graduate mr-2"></i>Student Dashboard</a>
+                
+                <a class="nav-link" href="profile.html"><i class="fas fa-users mr-2"></i>Profile</a>
+                
+            </nav>
+        </div>
+        <div class="content flex-grow-1">
+           
+            <div class="header">
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-link text-secondary d-lg-none"><i class="fas fa-bars"></i></button>
+                    <div class="search-bar ml-3 ml-lg-0">
+                        <input type="text" class="form-control" placeholder="Search here">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                
+            </div>
+
+
+    
+
+    <div class="content">
+        <div class="dashboard-header">
+            <h1>School Management Dashboard</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Total Students</div>
+                    <div class="card-body text-center">
+                        <h2>500</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Attendance Rate</div>
+                    <div class="card-body text-center">
+                        <h2>95%</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Average GPA</div>
+                    <div class="card-body text-center">
+                        <h2>3.5</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Recent Events</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Science Fair - March 15, 2023</li>
+                            <li>Parent-Teacher Meeting - March 20, 2023</li>
+                            <li>Spring Concert - April 5, 2023</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Financial Overview</div>
+                    <div class="card-body">
+                        <p>Total Revenue: <strong>$200,000</strong></p>
+                        <p>Total Expenses: <strong>$150,000</strong></p>
+                        <p>Net Income: <strong>$50,000 </strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">Student Performance Overview</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Grade</th>
+                                    <th>GPA</th>
+                                    <th>Attendance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>10</td>
+                                    <td>3.8</td>
+                                    <td>98%</td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>11</td>
+                                    <td>3.6</td>
+                                    <td>95%</td>
+                                </tr>
+                                <tr>
+                                    <td>Emily Johnson</td>
+                                    <td>12</td>
+                                    <td>3.9</td>
+                                    <td>97%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

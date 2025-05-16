@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #b4aef7;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .sidebar.collapsed {
+            transform: translateX(-250px);
+        }
+        .sidebar .nav-link {
+            color: #6c757d;
+        }
+        .sidebar .nav-link.active {
+            background-color: #343a40;
+            color: #82b6ec;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #dfe6ed;
+        }
+        .content {
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+        .card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .search-bar {
+            position: relative;
+        }
+        .header .search-bar input {
+            padding-left: 30px;
+        }
+        .header .search-bar i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .header .profile img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .header .profile .status {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #28a745;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="sidebar p-3" id="sidebar">
+            <div class="d-flex align-items-center mb-4">
+                <span class="ml-2 h4 font-weight-bold">School Management</span>
+                <button class="btn btn-link text-secondary ml-auto" id="sidebarToggle">
+                    <i class="fas fa-bars" id="toggleIcon"></i>
+                </button>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="admin.html"><i class="fas fa-user-shield mr-2"></i>Admin Dashboard</a>
+                <a class="nav-link" href="teacher.html"><i class="fas fa-chalkboard-teacher mr-2"></i>Teacher Dashboard</a>
+                <a class="nav-link" href="student.html"><i class="fas fa-user-graduate mr-2"></i>Student Dashboard</a>
+                <a class="nav-link" href="expense.html"><i class="fas fa-money-bill-wave"></i>Expenses</a>
+                <a class="nav-link" href="QUIZ.html"><i class=" fas fa-gamepad"></i>QUIZ</a>
+                <a class="nav-link" href="profile.html"><i class="fas fa-users mr-2"></i>Profile</a>
+            </nav>
+        </div>
+       
+        <div class="content flex-grow-1">
+            <div class="header">
+                <div class="search-bar ml-3 ml-lg-0">
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="profile position-relative">
+                        <a href="login.html"><button type="button" class="btn btn-danger">Login</button></a>
+                    </div>
+                </div>
+            </div>
+         
+            <h2 class="font-weight-bold mb-4">Welcome Admin!</h2>
+         
+            <div class="row mb-4">
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card p-3 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <div class="text-secondary">Students</div>
+                            <div class="h4 font-weight-bold">5005</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card p-3 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <div class="text-secondary">Awards</div>
+                            <div class="h4 font-weight-bold">50+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card p-3 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <div class="text-secondary">Department</div>
+                            <div class="h4 font-weight-bold">30+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card p-3 d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <div class="text-secondary">Revenue</div>
+                            <div class="h4 font-weight-bold">$505</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-lg-6 mb-3">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="font-weight-bold">Overview</h5>
+                            <div>
+                                <span class="text-primary mr-2">Teacher</span>
+                                <span class="text-info">Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="card p-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="font-weight-bold">Number of Students</h5>
+                            <div>
+                                <span class="text-primary mr-2">Boys</span>
+                                <span class="text-info">Girls</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Total Students</div>
+                        <div class="card-body text-center">
+                            <h2>500</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Attendance Rate</div>
+                        <div class="card-body text-center">
+                            <h2>95%</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">Average GPA</div>
+                        <div class="card-body text-center">
+                            <h2>3.5</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Recent Events</div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Science Fair - March 15, 2023</li>
+                                <li>Parent-Teacher Meeting - March 20, 2023</li>
+                                <li>Spring Concert - April 5, 2023</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Financial Overview</div>
+                        <div class="card-body">
+                            <p>Total Revenue: <strong>$200,000</strong></p>
+                            <p>Total Expenses: <strong>$150,000</strong></p>
+                            <p>Net Income: <strong>$50,000</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header">Student Performance Overview</div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Student Name</th>
+ <th>Grade</th>
+                                        <th>GPA</th>
+                                        <th>Attendance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td>10</td>
+                                        <td>3.8</td>
+                                        <td>98%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jane Smith</td>
+                                        <td>11</td>
+                                        <td>3.6</td>
+                                        <td>95%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Emily Johnson</td>
+                                        <td>12</td>
+                                        <td>3.9</td>
+                                        <td>97%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>
